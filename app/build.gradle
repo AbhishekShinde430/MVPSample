@@ -1,0 +1,105 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.mvpproject'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.mvpproject"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            debuggable false // Allows debugging in debug build
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            debuggable true // Allows debugging in debug build
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+    viewBinding {
+        enabled = true
+    }
+
+
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // Dagger 2
+    def daggerVersion = "2.44"
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    // Retrofit and Gson
+    def retrofitVersion = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion"
+
+    // RxJava 3
+    def rxJavaVersion = "3.1.5"
+    def rxAndroidVersion = "3.0.0"
+    implementation "io.reactivex.rxjava3:rxjava:$rxJavaVersion"
+    implementation "io.reactivex.rxjava3:rxandroid:$rxAndroidVersion"
+
+
+    //recyclerview
+    def recyclerViewVersion = "1.3.2"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+
+    // AndroidX Lifecycle (Optional)
+    def lifecycleVersion = "2.4.1"
+    //noinspection GradleDependency
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    // Material Design (Optional)
+    def materialVersion = "1.4.0"
+    //noinspection GradleDependency
+    implementation "com.google.android.material:material:$materialVersion"
+
+    // Gson (Optional)
+    def gsonVersion = "2.8.8"
+    //noinspection GradleDependency
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    def okhttp = "4.10.0"
+    //noinspection GradleDependency
+    implementation "com.squareup.okhttp3:okhttp:$okhttp"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
+
+    //chuker
+    def chuker = "4.0.0"
+    debugImplementation "com.github.chuckerteam.chucker:library:$chuker"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:$chuker"
+
+
+
+}

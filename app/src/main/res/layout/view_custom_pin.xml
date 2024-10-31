@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    
+    <com.example.mvpproject.utils.customview.CustomPinEditText
+        android:layout_width="55dp"
+        android:layout_margin="10dp"
+        android:layout_height="55dp"
+        android:id="@+id/pin_edit_text_1"/>
+
+    <com.example.mvpproject.utils.customview.CustomPinEditText
+        android:layout_width="55dp"
+        android:layout_margin="10dp"
+        android:layout_height="55dp"
+        android:id="@+id/pin_edit_text_2"/>
+
+    <com.example.mvpproject.utils.customview.CustomPinEditText
+        android:layout_width="55dp"
+        android:layout_margin="10dp"
+        android:layout_height="55dp"
+        android:id="@+id/pin_edit_text_3"/>
+
+    <com.example.mvpproject.utils.customview.CustomPinEditText
+        android:layout_width="55dp"
+        android:layout_margin="10dp"
+        android:layout_height="55dp"
+        android:id="@+id/pin_edit_text_4"/>
+
+</LinearLayout>
